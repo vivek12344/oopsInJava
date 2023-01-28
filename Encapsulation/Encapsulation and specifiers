@@ -1,0 +1,106 @@
+//ENCAPSULATION AND SPECIFIERS IN JAVA
+
+//ENCAPSULATION -- encapsulation is one of the oops concept that helps to binding together inside single class 
+
+//Encapsulation is way of hiding implementation details with the help of visibility mode
+//Abstraction is also way of hiding implementation details with the help of abstract keywords
+
+
+// access Specifier
+
+package Abstraction_code;
+
+public class Q1
+{ 
+     private int a = 10;
+     public int b = 90;
+     protected int c = 80;
+     int d = 19;
+
+}
+
+public class Q2 extends Q1
+{
+     public static void main(String[] args)
+     {
+      Q2 q= new Q2();
+      //System.out.println(q.a); // showimg error because of private specifier
+      System.out.println(q.b);
+      System.out.println(q.c);
+      System.out.println(q.d);
+      }
+}
+//output--
+            90
+            80
+            19
+
+
+//ENCAPSULATION
+
+private int vivek = 10;
+
+public Class A
+{
+  private int vivek=10;
+  int amit = 100;
+}
+
+Class B extends A
+{
+    public static void main(Strings[] args)
+    {
+      B b = new B();
+      System.out.println(b.amit);
+      System.out.println(b.vivek);
+    }
+}
+
+//output:
+         10
+         100
+
+
+//Let's see another example of encapsulation that has only four fields with its setter and getter methods.
+
+class Account
+ {  
+    //private data members  
+     private long acc_no;  
+     private String name,email;  
+     private float amount;  
+     //public getter and setter methods  
+    public long getAcc_no()
+    {  
+       return acc_no;  
+     }  
+    public void setAcc_no(long acc_no)
+    {  
+      this.acc_no = acc_no;  
+    }  
+    public String getName() 
+    {  
+      return name;  
+    }  
+    public void setName(String name) 
+    {  
+    this.name = name;  
+    }  
+    public String getEmail() 
+    {  
+    return email;  
+    }  
+    public void setEmail(String email)
+    {  
+    this.email = email;  
+    }  
+    public float getAmount()
+    {  
+    return amount;  
+    }  
+    public void setAmount(float amount)
+    {  
+    this.amount = amount;  
+    }  
+  
+}  
